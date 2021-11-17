@@ -15,8 +15,11 @@ RUN npm install -g serve
 # add app (add .dockerignore to remove useless files from the image)
 COPY . .
 
+RUN npm install
+RUN npm run build
+
 # expose port
 EXPOSE 3000
 
 # start app
-ENTRYPOINT ["serve", "/usr/src/windows11/build", "-l", "3000"]
+CMD serve /usr/src/windows11/build -l 3000
