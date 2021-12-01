@@ -5,11 +5,11 @@ pipeline {
   }
 
   stages {
-    stage('Checkout Source') {
+    /*stage('Checkout Source') {
       steps {
         git url:'https://github.com/EtiennePS/win11React.git', branch:'master'
       }
-    }
+    }*/ //useless since Jenkins does a default checkout
     
     stage("Build app") {
       steps {
